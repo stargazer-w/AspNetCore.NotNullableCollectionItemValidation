@@ -41,7 +41,8 @@ namespace Stargazer.Extensions.AspNetCore.NotNullableCollectionItemValidation
             foreach(var item in collectionModel)
             {
                 if(item is null)
-                    yield return new ModelValidationResult(i++.ToString(), "item can not be null");
+                    yield return new ModelValidationResult(i.ToString(), "item can not be null");
+                i++;
             }
         }
     }
